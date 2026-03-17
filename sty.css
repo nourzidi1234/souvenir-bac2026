@@ -1,0 +1,311 @@
+/* Global styles et hero, nav, btn, identiques à la version précédente */
+
+body{margin:0;font-family:"Poppins",sans-serif;background:linear-gradient(135deg,#0f172a,#1e3a8a);color:white;scroll-behavior:smooth;}
+nav{display:flex;justify-content:space-between;padding:20px 50px;background:rgba(0,0,0,0.4);backdrop-filter:blur(10px);}
+nav a{color:white;margin-left:20px;text-decoration:none;font-weight:500;}
+.hero{height:120vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#9333ea,#3b82f6);}
+.hero h2{font-size:4rem;margin-bottom:20px;text-shadow:2px 2px 8px #000;}
+.hero p{margin:10px 0;font-size:1.5rem;}
+.btn{padding:15px 35px;background:white;color:black;border-radius:30px;text-decoration:none;font-weight:bold;transition:0.3s;}
+.btn:hover{transform:scale(1.1);box-shadow:0 0 20px #fff;}
+
+/* Photos grid */
+.gallery{padding:80px 20px;}
+.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
+.card{width:200px;height:150px;border-radius:15px;overflow:hidden;position:relative;transition:0.5s;}
+.card img{width:100%;height:100%;object-fit:cover;transition:0.5s;}
+.card span{position:absolute;bottom:0;left:0;width:100%;background:rgba(0,0,0,0.6);color:#fff;padding:5px;font-size:12px;text-align:center;}
+.card:hover img{transform:scale(1.1);}
+
+/* Videos grid */
+.videos{padding:80px 20px;text-align:center;}
+.videos p{margin-bottom:30px;font-size:1.2rem;}
+.videos video{width:300px;height:200px;border-radius:15px;margin:10px;transition:0.3s;}
+.videos video:hover{transform:scale(1.05);box-shadow:0 0 20px #fff;}
+
+/* Memories */
+.memories{padding:80px 20px;background:linear-gradient(135deg,#9333ea,#facc15);color:#111;}
+.memories h2{margin-bottom:30px;font-size:2.5rem;}
+.story p{margin-bottom:15px;font-size:1.2rem;line-height:1.8;}
+
+/* Envelope */
+.envelope-container{display:flex;justify-content:center;margin-top:50px;perspective:1200px;}
+.envelope{position:relative;width:320px;height:220px;cursor:pointer;}
+.front{position:absolute;width:100%;height:100%;background:linear-gradient(135deg,#6366f1,#9333ea);border-radius:10px;z-index:2;}
+.flap{position:absolute;width:100%;height:100%;background:linear-gradient(135deg,#4f46e5,#7e22ce);clip-path:polygon(0 0,100% 0,50% 60%);transform-origin:top;transition:transform 1s ease;z-index:3;}
+.letter{position:absolute;top:0;left:5%;width:90%;height:200px;background:white;border-radius:10px;padding:15px;text-align:center;transform:translateY(80%);transition: all 1s ease; z-index:1; box-shadow:0 10px 25px rgba(0,0,0,0.3);}
+.letter p{color:#111;font-size:14px;}
+.inside-photo{width:100%;margin-top:10px;border-radius:10px;opacity:0;transition:opacity 1.2s ease;}
+.envelope.open .flap{transform:rotateX(180deg);}
+.envelope.open .letter{transform:translateY(-60%);z-index:5;}
+.envelope.open .inside-photo{opacity:1;}
+
+/* Footer */
+footer{text-align:center;padding:20px;background:black;font-size:1rem;}
+/* MOSAÏQUE PHOTOS */
+.mosaic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: 150px;
+    gap: 10px;
+    padding: 50px 20px;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+}
+
+/* Variations pour créer du dynamisme */
+.photo-large {grid-row: span 2; grid-column: span 2;}
+.photo-medium {grid-row: span 1; grid-column: span 1;}
+.photo-small {grid-row: span 1; grid-column: span 1;}
+
+/* Hover effects créatifs */
+.photo:hover {
+    transform: scale(1.1) rotate(1.5deg);
+    box-shadow: 0 15px 25px rgba(255,255,255,0.5);
+    z-index: 10;
+}
+/* SECTION SOUVENIRS COMPLETEMENT REPENSÉE */
+.memories {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #f5f7fa, #e4ebf5);
+    color: #1e293b;
+    font-family: "Georgia", serif;
+    display: flex;
+    justify-content: center;
+}
+
+.memory-container {
+    max-width: 900px;
+    text-align: center;
+    background: white;
+    padding: 50px 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    line-height: 1.8;
+}
+
+.memory-container h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.memory-container p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #1e293b;
+}
+
+/* FIN MEMOIRE – message de conclusion */
+.memory-end {
+    font-style: italic;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    color: #0f172a;
+}
+/* Grille mosaïque */
+.mosaic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: 150px;
+    gap: 10px;
+  }
+  
+  .photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  
+  /* Overlay fullscreen */
+  .overlay {
+    position: fixed;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    background: rgba(15,23,42,0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 1000;
+  }
+  
+  .overlay.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  #overlay-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 15px;
+    transform: scale(0.8);
+    transition: transform 0.5s ease;
+  }
+  
+  .overlay.show #overlay-img {
+    transform: scale(1);
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px; right: 30px;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+  }
+/* Grid des vidéos */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .video-thumb {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .video-thumb:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  
+  /* Overlay fullscreen – même style que photo */
+  #video-overlay {
+    position: fixed;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    background: rgba(15,23,42,0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 1000;
+  }
+  
+  #video-overlay.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  #overlay-video {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 15px;
+    transform: scale(0.8);
+    transition: transform 0.5s ease;
+  }
+  
+  #video-overlay.show #overlay-video {
+    transform: scale(1);
+  }
+  
+  #video-overlay .close {
+    position: absolute;
+    top: 20px; right: 30px;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  /* Section enveloppe */
+.envelope-section {
+    text-align: center;
+    margin: 80px 20px;
+    font-family: "Georgia", serif;
+  }
+  
+  /* L'enveloppe */
+  .envelope {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    background: #f1f3f6;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+  }
+  
+  /* Le rabat de l'enveloppe */
+  .envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; 
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 80px solid #d1d5db;
+    transform-origin: top center;
+    transition: transform 0.7s ease;
+    z-index: 10;
+  }
+  
+  /* Contenu caché au départ */
+  .envelope-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .envelope-content img {
+    width: 90%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Quand l'enveloppe est ouverte */
+  .envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+  }
+  
+  .envelope.open .envelope-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Bouton */
+  #open-envelope {
+    margin-top: 30px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border: none;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  #open-envelope:hover {
+    background-color: #2563eb;
+  }

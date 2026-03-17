@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BAC INFO 2026 - Souvenirs Immersifs</title>
+    <link rel="stylesheet" href="sty.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <h1>🎓 BAC INFO 2026</h1>
+      <div class="nav-links">
+        <a href="#hero">Accueil</a>
+        <a href="#photos">Galerie</a>
+        <a href="#videos">Vidéos</a>
+        <a href="#memories">Souvenirs</a>
+        <a href="#letter">Message</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <h2>Bienvenue dans notre mémoire ✨</h2>
+      <p>Une année pleine de rires, de défis et de moments inoubliables 💖</p>
+      <a href="#photos" class="btn">Découvrir nos souvenirs</a>
+    </section>
+
+    <!-- GALERIE PHOTOS -->
+    <section id="photos" class="gallery">
+      <h2>Nos Classmates 📸</h2>
+      <div class="mosaic-grid">
+        <!-- 43 photos, sans noms -->
+        <img src="bacphoto.jpg" alt="photo1" class="photo photo-large" />
+        <img src="bac2.jpg" alt="photo2" class="photo photo-medium" />
+        <img src="p3.jpg" alt="photo3" class="photo photo-small" />
+        <img src="p4.jpg" alt="photo4" class="photo photo-medium" />
+        <img src="p5.jpg" alt="photo5" class="photo photo-large" />
+        <img src="p6.jpg" alt="photo6" class="photo photo-small" />
+        <img src="p7.jpg" alt="photo7" class="photo photo-medium" />
+        <img src="p8.jpg" alt="photo8" class="photo photo-large" />
+        <img src="p9.jpg" alt="photo9" class="photo photo-small" />
+        <img src="p10.jpg" alt="photo10" class="photo photo-medium" />
+        <img src="p11.jpg" alt="photo11" class="photo photo-large" />
+        <img src="p12.jpg" alt="photo12" class="photo photo-small" />
+        <img src="p13.jpg" alt="photo13" class="photo photo-medium" />
+        <img src="p14.jpg" alt="photo14" class="photo photo-large" />
+        <img src="p15.jpg" alt="photo15" class="photo photo-small" />
+        <img src="p16.jpg" alt="photo16" class="photo photo-medium" />
+        <img src="p17.jpg" alt="photo17" class="photo photo-large" />
+        <img src="p18.jpg" alt="photo18" class="photo photo-small" />
+        <img src="p19.jpg" alt="photo19" class="photo photo-medium" />
+        <img src="p20.jpg" alt="photo20" class="photo photo-large" />
+        <img src="p21.jpg" alt="photo21" class="photo photo-small" />
+        <img src="p22.jpg" alt="photo22" class="photo photo-medium" />
+        <img src="p23.jpg" alt="photo23" class="photo photo-large" />
+        <img src="p24.jpg" alt="photo24" class="photo photo-small" />
+        <img src="p25.jpg" alt="photo25" class="photo photo-medium" />
+        <img src="p26.jpg" alt="photo26" class="photo photo-large" />
+        <img src="p27.jpg" alt="photo27" class="photo photo-small" />
+        <img src="p28.jpg" alt="photo28" class="photo photo-medium" />
+        <img src="p29.jpg" alt="photo29" class="photo photo-large" />
+        <img src="p30.jpg" alt="photo30" class="photo photo-small" />
+        <img src="p31.jpg" alt="photo31" class="photo photo-medium" />
+        <img src="p32.jpg" alt="photo32" class="photo photo-large" />
+        <img src="p33.jpg" alt="photo33" class="photo photo-small" />
+        <img src="p34.jpg" alt="photo34" class="photo photo-medium" />
+        <img src="p35.jpg" alt="photo35" class="photo photo-large" />
+        <img src="p36.jpg" alt="photo36" class="photo photo-small" />
+        <img src="p37.jpg" alt="photo37" class="photo photo-medium" />
+        <img src="p38.jpg" alt="photo38" class="photo photo-large" />
+        <img src="p39.jpg" alt="photo39" class="photo photo-small" />
+        <img src="p40.jpg" alt="photo40" class="photo photo-medium" />
+        <img src="p41.jpg" alt="photo41" class="photo photo-large" />
+        <img src="p42.jpg" alt="photo42" class="photo photo-small" />
+        <img src="p43.jpg" alt="photo43" class="photo photo-medium" />
+      </div>
+    </section>
+
+    <!-- Overlay pour afficher photo fullscreen -->
+    <div id="photo-overlay" class="overlay">
+      <img id="overlay-img" src="" alt="Photo agrandie" />
+      <span class="close" onclick="closePhoto()">&times;</span>
+    </div>
+    <!-- GALERIE VIDÉOS -->
+
+    <section id="videos" class="videos">
+      <h2>Jours de Craquage 🎬</h2>
+      <div class="video-grid">
+        <!-- 9 vidéos, prépare les sources -->
+        <video controls><source src="vid1.mp4" type="video/mp4" /></video>
+        <video controls><source src="vid2.mp4" type="video/mp4" /></video>
+        <video controls><source src="vid3.mp4" type="video/mp4" /></video>
+        <video controls><source src="vid4.mp4" type="video/mp4" /></video>
+        <video controls><source src="vid5.mp4" type="video/mp4" /></video>
+        <video controls><source src="vid6.mp4" type="video/mp4" /></video>
+        <video controls><source src="vid7.mp4" type="video/mp4" /></video>
+        <video controls><source src="vid8.mp4" type="video/mp4" /></video>
+        <video controls><source src="vid9.mp4" type="video/mp4" /></video>
+      </div>
+    </section>
+
+    <!-- Overlay vidéo fullscreen -->
+    <div id="video-overlay" class="overlay">
+      <video id="overlay-video" controls autoplay></video>
+      <span class="close" onclick="closeVideo()">&times;</span>
+    </div>
+    <section id="memories" class="memories">
+      <div class="memory-container">
+        <h2>L'année BAC INFO 2026</h2>
+        <p>
+          L'année a commencé avec des émotions mêlées d'excitation et
+          d'appréhension. Chaque cours, chaque projet et chaque TP nous a
+          rapprochés et appris la valeur du travail en équipe. Les rires
+          partagés dans les moments les plus simples, les défis relevés
+          ensemble, et les souvenirs gravés dans chaque sourire resteront à
+          jamais dans nos mémoires.
+        </p>
+        <p>
+          Cette année nous a façonnés, non seulement en tant qu’étudiants, mais
+          aussi en tant qu’amis. Les instants de complicité, les réussites et
+          même les difficultés nous ont appris que chaque moment compte et qu’il
+          est précieux.
+        </p>
+        <p class="memory-end">
+          Aujourd’hui, alors que nous tournons cette page, nous gardons dans nos
+          cœurs l’esprit de camaraderie et les souvenirs de cette année
+          exceptionnelle. BAC INFO 2026 restera à jamais un chapitre mémorable
+          de notre vie.
+        </p>
+      </div>
+    </section>
+
+    <!-- ENVELOPPE MESSAGE -->
+    <section id="envelope-section" class="envelope-section">
+      <div class="envelope" id="envelope">
+        <!-- Partie visible de l'enveloppe -->
+        <div class="envelope-flap" id="flap"></div>
+
+        <!-- Contenu secret de l'enveloppe -->
+        <div class="envelope-content" id="envelope-content">
+          <img src="bacphoto.jpg" alt="Photo souvenir" />
+          <p>
+            Cher(e) camarade, Cette année BAC INFO 2026 restera gravée dans nos
+            mémoires. Merci pour tous les moments partagés et les souvenirs
+            inoubliables !
+          </p>
+        </div>
+      </div>
+      <button id="open-envelope">Ouvrir l'enveloppe</button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>✨ BAC INFO 2026 — Souvenirs éternels & amitié 💖</p>
+    </footer>
+
+    <script src="scr.js"></script>
+  </body>
+</html>
